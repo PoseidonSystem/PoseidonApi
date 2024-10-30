@@ -1,20 +1,20 @@
-name: Jekyll site CI
-
-on:
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v4
-    - name: Build the site in the jekyll/builder container
-      run: |
-        docker run \
-        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
-        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
+<!DOCTYPE html>
+     <html lang="pt-BR">
+     <head>
+         <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>Poseidon API Dashboard</title>
+         <style>
+             body {
+                 background-color: #1e1e1e;
+                 color: white;
+                 font-family: 'Original Surfer', cursive;
+             }
+             /* Adicione mais estilos conforme necessário */
+         </style>
+     </head>
+     <body>
+         <h1>Bem-vindo ao Dashboard da Poseidon API</h1>
+         <p>Esta é a sua página inicial.</p>
+     </body>
+     </html>
